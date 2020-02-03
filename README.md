@@ -6,14 +6,34 @@
 
 ## 各ディレクトリについて
 
-### docker
-
-docker環境の構築
-
 ### git
 
 git環境の構築
 
+### docker
+
+docker環境の構築
+
+### certbot
+
+certbot環境の構築
+
+certbotのファイル修正について
+
+⇨certbotをインストールしたら直ぐに「/usr/bin/certbot-auto」を修正する
+
+```
+$ sudo vim /usr/bin/certbot-auto
+・
+・
+・
+elif [ -f /etc/issue ] && grep -iq "Amazon Linux" /etc/issue ; then
+⇨下記の通りに書き換える。
+elif grep -i "Amazon Linux" /etc/issue > dev/null 2>&1 || grep 'cpe:.*:amazon_linux:2' /etc/os-release > /dev/null 2>&1; then
+```
+
+
 ### npm_vue
 
 npm環境の構築、vue環境の構築
+
