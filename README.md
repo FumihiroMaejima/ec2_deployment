@@ -41,8 +41,16 @@ npm環境の構築、vue環境の構築
 
 ### ユーザーの作成
 
+madeUserグループをsudoコマンドがパスワード無しで実行できるように追記
+
 ```
 sudo adduser madeUser
+
+```
+
+### sudo権限の追加
+
+```
 sudo visudo
 ・
 ・
