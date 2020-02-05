@@ -37,3 +37,25 @@ elif grep -i "Amazon Linux" /etc/issue > dev/null 2>&1 || grep 'cpe:.*:amazon_li
 
 npm環境の構築、vue環境の構築
 
+
+
+### ユーザーの作成
+
+```
+sudo adduser madeUser
+sudo visudo
+・
+・
+・
+## Same thing without a password
+# %wheel        ALL=(ALL)       NOPASSWD: ALL
+madeUser        ALL=(ALL)       NOPASSWD: ALL
+
+```
+
+
+### インスタンスにアクセス
+
+```
+$ ssh -p ポート番号 -i ~/.ssh/秘密鍵.pem ユーザー@サーバーのIP
+```
