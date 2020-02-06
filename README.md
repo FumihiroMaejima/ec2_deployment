@@ -48,6 +48,15 @@ sudo adduser madeUser
 
 ```
 
+### パスワードを変更する場合
+
+ec2-userなどもこれで変更出来る。
+
+```
+sudo passwd madeUser
+```
+
+
 ### sudo権限の追加
 
 ```
