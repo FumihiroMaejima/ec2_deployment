@@ -37,3 +37,42 @@ elif grep -i "Amazon Linux" /etc/issue > dev/null 2>&1 || grep 'cpe:.*:amazon_li
 
 npm環境の構築、vue環境の構築
 
+
+
+### ユーザーの作成
+
+madeUserグループをsudoコマンドがパスワード無しで実行できるように追記
+
+```
+sudo adduser madeUser
+
+```
+
+### パスワードを変更する場合
+
+ec2-userなどもこれで変更出来る。
+
+```
+sudo passwd madeUser
+```
+
+
+### sudo権限の追加
+
+```
+sudo visudo
+・
+・
+・
+## Same thing without a password
+# %wheel        ALL=(ALL)       NOPASSWD: ALL
+madeUser        ALL=(ALL)       NOPASSWD: ALL
+
+```
+
+
+### インスタンスにアクセス
+
+```
+$ ssh -p ポート番号 -i ~/.ssh/秘密鍵.pem ユーザー@サーバーのIP
+```

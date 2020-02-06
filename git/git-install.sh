@@ -1,7 +1,8 @@
 #!/bin/sh
 
-# gitのインストール
+# gitのインストール(ついでにvimも)
 installGit() {
+    yum -y install vim
     yum -y install git
 }
 
