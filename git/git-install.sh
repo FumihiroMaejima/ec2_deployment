@@ -2,8 +2,8 @@
 
 # gitのインストール(ついでにvimも)
 installGit() {
-    yum -y install vim
-    yum -y install git
+    sudo yum -y install vim
+    sudo yum -y install git
 }
 
 installGit

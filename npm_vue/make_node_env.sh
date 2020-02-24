@@ -29,12 +29,12 @@ installStableVersion() {
 
 # yarnのインストール
 installYarn() {
-    npm install -g yarn
+   npm install -g yarn
 }
 
 # vue-cliのインストール
 addVueCli() {
-    yarn global add @vue/cli
+   yarn global add @vue/cli
 }
 
 # 関数呼び出し
